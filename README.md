@@ -1,6 +1,6 @@
 # Личный проект «Cat Energy»
 
-* Студент: Андрей Думский.
+* Студент: [Андрей Думский](https://htmlacademy.ru/profile/andrey_dumskiy).
 * Наставник: [Сергей Зубов](https://htmlacademy.ru/profile/serj).
 
 ---
