@@ -17,26 +17,26 @@
     <nav class="main-header__navigation navigation">
       <ul class="navigation__list">
         <li class="navigation__item">
-          <a class="navigation__link" href="index.html">главная</a>
+          <a class="navigation__link" href="index.html">Главная</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="catalog.html">каталог продукции</a>
+          <a class="navigation__link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link">подбор программы</a>
+          <a class="navigation__link">Подбор программы</a>
         </li>
       </ul>
     </nav>
   </header>
   <main class="main-container">
     <section class="questionnaire">
-      <h1 class="questionnaire__title title">подбор программы</h1>
+      <h1 class="questionnaire__title title">Подбор программы</h1>
       <h2 class="questionnaire__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
       <form class="questionnaire__form form" action="https://echo.htmlacademy.ru/" method="get">
         <h3 class="visually-hidden">Информация о питомце</h3>
         <fieldset class="form__fieldset fieldset">
           <label class="fieldset__field field">
-            <span class="field__label">ИМЯ:*</span>
+            <span class="field__label">Имя:*</span>
             <input class="field__input" type="text" name="pet-name" value="БАРСИК" placeholder="БАРСИК" required>
           </label>
           <label class="fieldset__field field">
@@ -50,20 +50,20 @@
         </fieldset>
         <h3 class="visually-hidden">Программа питания</h3>
         <fieldset class="form__fieldset fieldset">
-          <label class="fieldset__field field">
-            <span class="field__mark field__mark--circle"></span>
-            <span class="field__label">похудение</span>
-            <input class="field__input" type="radio" name="nutrition-programs" value="slim" checked>
+          <label class="fieldset__label pick">
+            <span class="pick__mark pick__mark--circle"></span>
+            <span class="pick__label">Похудение</span>
+            <input class="pick__input" type="radio" name="nutrition-programs" value="slim" checked>
           </label>
-          <label class="fieldset__field field">
-            <span class="field__mark field__mark--circle"></span>
-            <span class="field__label">Набор массы</span>
-            <input class="field__input" type="radio" name="nutrition-programs" value="pro">
+          <label class="fieldset__label pick">
+            <span class="pick__mark pick__mark--circle"></span>
+            <span class="pick__label">Набор массы</span>
+            <input class="pick__input" type="radio" name="nutrition-programs" value="pro">
           </label>
-          <label class="fieldset__field field">
-            <span class="field__mark field__mark--circle"></span>
-            <span class="field__label">Не знаю (Нужен ваш совет)</span>
-            <input class="field__input" type="radio" name="nutrition-programs" value="need-advice">
+          <label class="fieldset__label pick">
+            <span class="pick__mark pick__mark--circle"></span>
+            <span class="pick__label">Не знаю (нужен ваш совет)</span>
+            <input class="pick__input" type="radio" name="nutrition-programs" value="need-advice">
           </label>
         </fieldset>
         <h3 class="form__title title title--line">Контактные данные (владельца кота)</h3>
@@ -85,34 +85,34 @@
         </fieldset>
         <h3 class="form__title title title--line">Дополнительно</h3>
         <fieldset class="form__fieldset fieldset">
-          <label class="fieldset__field field">
-            <span class="field__mark field__mark--square"></span>
-            <span class="field__label">сахарозаменитель</span>
-            <input class="field__input" type="checkbox" name="sweetener" checked>
+          <label class="fieldset__label pick">
+            <span class="pick__mark pick__mark--square"></span>
+            <span class="pick__label">Сахарозаменитель</span>
+            <input class="pick__input" type="checkbox" name="sweetener" checked>
           </label>
-          <label class="fieldset__field field">
-            <span class="field__mark field__mark--square"></span>
-            <span class="field__label">питьевая вода</span>
-            <input class="field__input" type="checkbox" name="drinking-water">
+          <label class="fieldset__label pick">
+            <span class="pick__mark pick__mark--square"></span>
+            <span class="pick__label">Питьевая вода</span>
+            <input class="pick__input" type="checkbox" name="drinking-water">
           </label>
-          <label class="fieldset__field field">
-            <span class="field__mark field__mark--square"></span>
-            <span class="field__label">молоко</span>
-            <input class="field__input" type="checkbox" name="milk">
+          <label class="fieldset__label pick">
+            <span class="pick__mark pick__mark--square"></span>
+            <span class="pick__label">Молоко</span>
+            <input class="pick__input" type="checkbox" name="milk">
           </label>
-          <label class="fieldset__field field">
-            <span class="field__mark field__mark--square"></span>
-            <span class="field__label">витамины</span>
-            <input class="field__input" type="checkbox" name="vitamins">
+          <label class="fieldset__label pick">
+            <span class="pick__mark pick__mark--square"></span>
+            <span class="pick__label">Витамины</span>
+            <input class="pick__input" type="checkbox" name="vitamins">
           </label>
         </fieldset>
-        <button class="form__button button button--green" type="submit">отправить заявку</button>
+        <button class="form__button button button--green" type="submit">Отправить заявку</button>
         <small class="form__note">* — Обязательные поля</small>
       </form>
     </section>
     <section class="contacts">
       <div class="contacts__header">
-        <h2 class="contacts__title">приглашаем<br>к сотрудничеству<br>дилеров!</h2>
+        <h2 class="contacts__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
         <address class="contacts__address">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</address>
       </div>
       <iframe class="contacts__maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.3208341612317!2d30.32175993776117!3d59.93777685657714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1687970077901!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
