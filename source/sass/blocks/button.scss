@@ -1,0 +1,19 @@
+.button {
+  font-family: $spesial-font;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $basic-white;
+  border: none;
+
+  &--green {
+    background-color: $basic-green;
+  }
+
+  &--grey {
+    background-color: $basic-grey;
+    color: $special-grey-darkness;
+  }
+}

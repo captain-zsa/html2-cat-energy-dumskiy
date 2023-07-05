@@ -1,0 +1,22 @@
+.arguments {
+  font-family: $spesial-font;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.arguments__list {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.arguments__value {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.arguments__description {
+  margin: 0;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: lowercase;
+}

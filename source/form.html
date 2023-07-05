@@ -4,16 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Cat-Energy</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo logo" href="index.html">
-      <img class="logo__icon-picture" src="img/logo-icon.svg" width="34" height="38" alt="Логотип Cat Energy.">
-      <img class="logo__icon-text" src="img/logo-text.svg" width="101" height="18" alt="Текстовый логотип Cat Energy.">
-    </a>
-    <button class="main-header__toggle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
+    <div class="main-header__wrapper">
+      <a class="main-header__logo logo" href="index.html">
+        <img class="logo__icon-picture" src="img/logo-icon.svg" width="34" height="38" alt="Логотип Cat Energy.">
+        <img class="logo__icon-text" src="img/logo-text.svg" width="101" height="18" alt="Текстовый логотип Cat Energy.">
+      </a>
+      <button class="main-header__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    </div>
     <nav class="main-header__navigation navigation">
       <ul class="navigation__list">
         <li class="navigation__item">
@@ -30,11 +33,13 @@
   </header>
   <main class="main-container">
     <section class="questionnaire">
-      <h1 class="questionnaire__title title">Подбор программы</h1>
-      <h2 class="questionnaire__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
+      <div class="questionnaire__header">
+        <h1 class="questionnaire__title title">Подбор программы</h1>
+        <h2 class="questionnaire__subtitle title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
+      </div>
       <form class="questionnaire__form form" action="https://echo.htmlacademy.ru/" method="get">
-        <h3 class="visually-hidden">Информация о питомце</h3>
         <fieldset class="form__fieldset fieldset">
+          <h3 class="visually-hidden">Информация о питомце</h3>
           <label class="fieldset__field field">
             <span class="field__label">Имя:*</span>
             <input class="field__input" type="text" name="pet-name" value="БАРСИК" placeholder="БАРСИК" required>
@@ -48,8 +53,8 @@
             <input class="field__input" type="number" name="pet-age" value="7" placeholder="7">
           </label>
         </fieldset>
-        <h3 class="visually-hidden">Программа питания</h3>
         <fieldset class="form__fieldset fieldset">
+          <h3 class="visually-hidden">Программа питания</h3>
           <label class="fieldset__label pick">
             <span class="pick__mark pick__mark--circle"></span>
             <span class="pick__label">Похудение</span>
@@ -66,8 +71,8 @@
             <input class="pick__input" type="radio" name="nutrition-programs" value="need-advice">
           </label>
         </fieldset>
-        <h3 class="form__title title title--line">Контактные данные (владельца кота)</h3>
         <fieldset class="form__fieldset fieldset">
+          <h3 class="fieldset__title title title--line">Контактные данные (владельца кота)</h3>
           <label class="fieldset__field field">
             <span class="field__label">E-mail:*</span>
             <input class="field__input" type="email" name="owner-email" value="kuklachev@gmail.com" placeholder="kuklachev@gmail.com" required>
@@ -77,14 +82,14 @@
             <input class="field__input" type="tel" name="owner-phone" value="tel:89609006090" placeholder="8 (960) 900-60-90" required>
           </label>
         </fieldset>
-        <h3 class="form__title title title--line">Комментарий</h3>
         <fieldset class="form__fieldset fieldset">
+          <h3 class="fieldset__title title title--line">Комментарий</h3>
           <label class="fieldset__field field">
             <input class="field__input" type="text" name="comment" placeholder="Расскажите обо всех повадках кота">
           </label>
         </fieldset>
-        <h3 class="form__title title title--line">Дополнительно</h3>
         <fieldset class="form__fieldset fieldset">
+          <h3 class="fieldset__title title title--line">Дополнительно</h3>
           <label class="fieldset__label pick">
             <span class="pick__mark pick__mark--square"></span>
             <span class="pick__label">Сахарозаменитель</span>
@@ -111,8 +116,8 @@
       </form>
     </section>
     <section class="contacts">
-      <div class="contacts__header">
-        <h2 class="contacts__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
+      <div class="contacts__header contacts__header--grey">
+        <h2 class="contacts__title title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
         <address class="contacts__address">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</address>
       </div>
       <iframe class="contacts__maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.3208341612317!2d30.32175993776117!3d59.93777685657714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1687970077901!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -143,7 +148,7 @@
         </a>
       </li>
     </ul>
-    <a class="main-footer-copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт разработчика данного сайта">
+    <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт разработчика данного сайта">
       <span class="copyright__text">HTML Academy</span>
       <svg class="copyright__icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34" fill="none" viewBox="0 0 27 34"><g clip-path="url(#a)"><path fill="#666" d="M13.64.02 13.5 0 0 1.4v24.61L13.5 34 27 26.01V1.41L13.64 0Zm11.6 25L13.5 31.96 1.77 25.02v-10.1l11.68 6.93.02 1.25-8.02-4.75v1.23l8.04 4.8.02 1.3-8.05-4.76v1.22l8.04 4.81 8.12-4.83V16.9l3.62-2.15v10.26Zm0-11.57L22 15.33l-1.48.88-7.06-4.19-.01 1.23 6.04 3.57-.06.03-.13.07-.86.5-4.98-2.95-.01 1.22 3.93 2.33-.93.61-.02.01-2.97-1.74-.01 1.23 1.94 1.13-1.98 1.19L1.8 13.58l11.63-6.96 11.8 6.83Zm0-1.22L13.43 5.3 1.77 12.22V2.99L13.5 1.76 25.23 3v9.24Z"/></g><defs><clipPath><path fill="#fff" d="M0 0h27v34H0z"/></clipPath></defs></svg>
     </a>
