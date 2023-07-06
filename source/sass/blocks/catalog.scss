@@ -1,0 +1,9 @@
+.catalog__title {
+  margin: 27px 0 41px 20px;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.catalog__list {
+  @include clear-list;
+}

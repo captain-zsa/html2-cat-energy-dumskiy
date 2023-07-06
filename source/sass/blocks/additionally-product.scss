@@ -1,0 +1,19 @@
+.additionally-product {
+  padding: 25px 20px 35px;
+}
+
+.additionally-product__title {
+  margin: 0;
+  margin-bottom: 36px;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.additionally-product__list {
+  @include clear-list;
+  margin-bottom: 35px;
+}
+
+.additionally-product__promotion {
+  min-height: 289px;
+}

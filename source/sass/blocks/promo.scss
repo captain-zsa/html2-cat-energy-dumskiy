@@ -1,0 +1,46 @@
+.promo {
+  position: relative;
+  font-family: $spesial-font;
+  color: $basic-white;
+  text-align: center;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 320px;
+    height: 302px;
+    z-index: -1;
+    background: $basic-green url("../img/cat-background.jpg") no-repeat center center;
+  }
+}
+
+.promo__wrapper {
+  padding: 27px 20px 0;
+}
+
+.promo__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.promo__tagline {
+  margin: 0;
+  margin-bottom: 29px;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.promo__image {
+  margin-bottom: 3px;
+  display: block;
+}
+
+.promo__button {
+  padding: 8px 0;
+  display: block;
+}
