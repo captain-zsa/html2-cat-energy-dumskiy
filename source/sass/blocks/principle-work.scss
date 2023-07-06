@@ -10,8 +10,6 @@
 }
 
 .principle-work__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  color: $special-grey-darkness;
+  @include clear-list;
+  color: $special-gray-darkness;
 }

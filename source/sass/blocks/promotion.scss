@@ -1,25 +1,16 @@
 .promotion {
   position: relative;
-}
 
-.promotion::before,
-.promotion::after {
-  content: "";
-  width: 279px;
-  height: 289px;
-  position: absolute;
-  display: block;
-  top: 0;
-}
-
-.promotion::before {
-  background-color: rgba(104, 183, 56, 0.85);
-  z-index: -1;
-}
-
-.promotion::after {
-  background: url("../img/cat-case-background.jpg") no-repeat center center;
-  z-index: -2;
+  &::before {
+    content: "";
+    width: 279px;
+    height: 289px;
+    position: absolute;
+    display: block;
+    top: 0;
+    z-index: -1;
+    background: $basic-green url("../img/cat-case-background.jpg") no-repeat center center;
+  }
 }
 
 .promotion__wrapper {
