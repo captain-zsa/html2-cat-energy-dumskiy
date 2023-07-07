@@ -1,4 +1,16 @@
 .main-footer {
   padding: 40px 20px;
-  background-color: $basic-gray;
+  background-color: $gray-10;
+  display: grid;
+  gap: 40px;
+
+  @include tablet {
+    padding: 55px 30px;
+    grid-template-columns: 168px 1fr 168px;
+    align-items: center;
+  }
+
+  @include desktop {
+    padding: 66px 110px;
+  }
 }

@@ -1,8 +1,28 @@
+.contacts {
+  position: relative;
+}
+
 .contacts__header {
   padding: 26px 20px;
+  display: flex;
+  justify-content: space-between;
 
   &--gray {
-    background-color: $basic-gray;
+    background-color: $gray-10;
+  }
+
+  @include tablet {
+    padding: 60px 70px 56px;
+  }
+
+  @include desktop {
+    padding: 60px 60px 56px 80px;
+    position: absolute;
+    min-width: 565px;
+    box-sizing: border-box;
+    background-color: $white;
+    top: 95px;
+    left: 110px;
   }
 }
 
@@ -10,10 +30,23 @@
   margin: 0;
   font-size: 16px;
   line-height: 20px;
+
+  @include tablet-only {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .contacts__address {
   font-size: 14px;
   line-height: 20px;
   font-style: normal;
+
+  @include tablet-only {
+    text-align: right;
+  }
+
+  @include tablet-only {
+    font-size: 16px;
+  }
 }

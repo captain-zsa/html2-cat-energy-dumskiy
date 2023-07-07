@@ -9,7 +9,7 @@
     display: block;
     top: 0;
     z-index: -1;
-    background: $basic-green url("../img/cat-case-background.jpg") no-repeat center center;
+    background: $green url("../img/cat-case-background.jpg") no-repeat center center;
   }
 }
 
@@ -20,7 +20,7 @@
 .promotion__text {
   margin: 0;
   margin-top: 128px;
-  color: $basic-white;
+  color: $white;
   text-align: center;
   font-size: 16px;
   line-height: 20px;

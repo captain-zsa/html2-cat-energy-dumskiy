@@ -1,5 +1,13 @@
-.principle-work__wrapper {
-  padding: 0 20px 49px;
+.principle-work {
+  padding: 0 20px 53px;
+
+  @include tablet {
+    padding: 45px 30px 47px 31px;
+  }
+
+  @include desktop {
+    padding: 71px 106px 69px 110px;
+  }
 }
 
 .principle-work__title {
@@ -7,9 +15,67 @@
   margin-bottom: 40px;
   font-size: 36px;
   line-height: 40px;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
 }
 
 .principle-work__list {
   @include clear-list;
-  color: $special-gray-darkness;
+  color: $gray-70;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  @include tablet {
+    gap: 37px 57px;
+  }
+
+  @include desktop {
+    gap: 74px;
+  }
+}
+
+.principle-work__item {
+  position: relative;
+  min-height: 54px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: -2px;
+    background-color: $green;
+
+    @include tablet {
+      width: 80px;
+      height: 80px;
+      top: 40px;
+    }
+  }
+
+  @include tablet {
+    width: 325px;
+    min-height: 280px;
+  }
+
+  @include desktop {
+    width: 250px;
+    //min-height: 280px;
+  }
+}
+
+.principle-work__description {
+  margin: 0;
+  margin-left: 80px;
+
+  @include tablet {
+    margin-left: 0;
+    margin-top: 151px;
+  }
 }

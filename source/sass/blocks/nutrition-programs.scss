@@ -1,7 +1,33 @@
 .nutrition-programs__wrapper {
   padding: 20px;
+
+  @include tablet {
+    padding: 0 31px 0 30px;
+  }
+
+  @include desktop {
+    padding: 82px 110px 71px;
+  }
 }
 
 .nutrition-programs__list {
   @include clear-list;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include tablet {
+    gap: 30px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    gap: 80px;
+  }
+}
+
+.nutrition-programs__item {
+  @include desktop {
+    width: 50%;
+  }
 }
