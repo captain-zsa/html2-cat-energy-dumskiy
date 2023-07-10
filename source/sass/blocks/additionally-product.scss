@@ -1,5 +1,18 @@
-.additionally-product {
-  padding: 25px 20px 35px;
+.additionally-product__container {
+  @include container;
+  padding: 25px 0 35px;
+
+  @include tablet {
+    padding: 68px 0 76px;
+  }
+}
+
+.additionally-product__wrapper {
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    column-gap: 80px;
+  }
 }
 
 .additionally-product__title {
@@ -7,13 +20,23 @@
   margin-bottom: 36px;
   font-size: 24px;
   line-height: 24px;
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 80px;
+  }
 }
 
 .additionally-product__list {
   @include clear-list;
   margin-bottom: 35px;
-}
 
-.additionally-product__promotion {
-  min-height: 289px;
+  @include tablet {
+    margin-bottom: 69px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+  }
 }

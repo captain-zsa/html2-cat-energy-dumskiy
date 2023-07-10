@@ -1,9 +1,5 @@
 .living-example {
   position: relative;
-}
-
-.living-example__container {
-  padding: 25px 20px 40px;
 
   &::after {
     content: "";
@@ -21,12 +17,20 @@
   }
 
   @include tablet-only {
-    padding: 43px 30px 101px 31px;
     border-top: 1px solid $gray-30;
+  }
+}
+
+.living-example__container {
+  @include container;
+  padding: 25px 0 40px;
+
+  @include tablet-only {
+    padding: 43px 0 101px;
   }
 
   @include desktop {
-    padding: 0 110px 75px;
+    padding: 30px 0 75px;
     display: flex;
     justify-content: space-between;
   }

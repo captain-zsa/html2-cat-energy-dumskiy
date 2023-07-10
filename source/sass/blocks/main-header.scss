@@ -1,12 +1,12 @@
-.main-header {
+.main-header__container {
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+
   @include tablet {
+    @include container;
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
-  }
-
-  @include desktop {
-    padding: 53px 110px 29px;
   }
 }
 
@@ -26,7 +26,6 @@
 }
 
 .main-header__toggle {
-  //@include clear-input;
   display: block;
   width: 24px;
   height: 18px;

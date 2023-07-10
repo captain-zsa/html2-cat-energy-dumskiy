@@ -1,12 +1,12 @@
-.nutrition-programs__wrapper {
-  padding: 20px;
+.nutrition-programs__container {
+  @include container;
 
-  @include tablet {
-    padding: 0 31px 0 30px;
+  @include mobile-only {
+    padding: 20px 0 10px;
   }
 
   @include desktop {
-    padding: 82px 110px 71px;
+    padding: 82px 0 35px;
   }
 }
 

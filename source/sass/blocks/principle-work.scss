@@ -1,12 +1,13 @@
-.principle-work {
-  padding: 0 20px 53px;
+.principle-work__container {
+  @include container;
+  padding: 10px 0 53px;
 
   @include tablet {
-    padding: 45px 30px 47px 31px;
+    padding: 45px 0 47px;
   }
 
   @include desktop {
-    padding: 71px 106px 69px 110px;
+    padding: 36px 0 39px;
   }
 }
 
@@ -35,7 +36,7 @@
   }
 
   @include desktop {
-    gap: 74px;
+    gap: 73px;
   }
 }
 
@@ -66,7 +67,6 @@
 
   @include desktop {
     width: 250px;
-    //min-height: 280px;
   }
 }
 
