@@ -27,15 +27,16 @@
 .principle-work__list {
   @include clear-list;
   color: $gray-70;
-  display: flex;
+  display: grid;
   gap: 20px;
-  flex-wrap: wrap;
 
   @include tablet {
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     gap: 37px 57px;
   }
 
   @include desktop {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 73px;
   }
 }
@@ -61,12 +62,7 @@
   }
 
   @include tablet {
-    width: 325px;
     min-height: 280px;
-  }
-
-  @include desktop {
-    width: 250px;
   }
 }
 

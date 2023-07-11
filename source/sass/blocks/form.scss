@@ -1,15 +1,135 @@
+.form__group {
+  display: grid;
+  gap: 24px;
+
+  @include tablet {
+    grid-template-columns: repeat(auto-fit, minmax(568px, 1fr));
+    gap: 80px 72px;
+  }
+}
+
+.form__pet-info {
+  div {
+    display: grid;
+    gap: 14px;
+
+    @include tablet {
+      gap: 20px;
+    }
+  }
+}
+
+.form__nutrition-programs {
+  @include tablet {
+    border: 1px solid #e7e7e7;
+  }
+
+  div {
+    padding: 22px 0 19px;
+    display: grid;
+    gap: 13px;
+
+    @include tablet {
+      padding: 25px 28px;
+    }
+  }
+}
+
+.form__contacts {
+  h3 {
+    margin: 26px 0 35px;
+
+    @include tablet {
+      margin: 75px 0 76px;
+    }
+
+    @include desktop {
+      margin: 69px 0 76px;
+    }
+  }
+
+  div {
+    display: grid;
+    gap: 14px;
+
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 80px;
+    }
+  }
+}
+
+.form__comment {
+  h3 {
+    margin: 34px 0 38px;
+
+    @include tablet {
+      margin: 65px 0 76px;
+    }
+
+    @include desktop {
+      margin: 67px 0 76px;
+    }
+  }
+}
+
+.form__additionally {
+  h3 {
+    margin: 23px 0 34px;
+
+    @include tablet {
+      margin: 65px 0 57px;
+    }
+
+    @include tablet {
+      margin: 67px 0 57px;
+    }
+  }
+
+  div {
+    display: grid;
+    gap: 13px;
+
+    @include tablet {
+      grid-template-columns: repeat(auto-fit, minmax(254px, 1fr));
+      gap: 32px 60px;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      gap: 32px 80px;
+    }
+  }
+}
+
+.form__footer {
+  padding: 34px 0 32px;
+  display: grid;
+  gap: 21px;
+  align-items: center;
+
+  @include tablet {
+    padding: 54px 0 72px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+  }
+
+  @include tablet {
+    padding: 61px 0 82px;
+    gap: 80px;
+  }
+}
+
 .form__button {
-  display: block;
-  width: 280px;
-  margin: 34px auto 21px;
   padding: 14px 0;
   box-sizing: border-box;
 }
 
 .form__note {
-  margin-bottom: 32px;
-  text-align: center;
-  display: block;
   font-size: 14px;
   line-height: 16px;
+
+  @include mobile-only {
+    text-align: center;
+  }
 }

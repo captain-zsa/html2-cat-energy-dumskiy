@@ -35,87 +35,103 @@
   </header>
   <main class="main-container">
     <section class="questionnaire">
-      <div class="questionnaire__header">
-        <h1 class="questionnaire__title title">Подбор программы</h1>
-        <h2 class="questionnaire__subtitle title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
+      <div class="questionnaire__container">
+        <div class="questionnaire__header">
+          <h1 class="questionnaire__title title">Подбор программы</h1>
+          <h2 class="questionnaire__subtitle title">Заполните анкету, и мы подберем<br>программу питания для вашего кота</h2>
+        </div>
+        <form class="questionnaire__form form" action="https://echo.htmlacademy.ru/" method="get">
+          <div class="form__group">
+            <fieldset class="form__fieldset form__pet-info fieldset">
+              <h3 class="fieldset__title visually-hidden">Информация о питомце</h3>
+              <div class="fieldset__wrapper">
+                <label class="fieldset__field field">
+                  <span class="field__label">Имя:*</span>
+                  <input class="field__input" type="text" name="pet-name" placeholder="БАРСИК" required>
+                </label>
+                <label class="fieldset__field field">
+                  <span class="field__label">Вес (кг):*</span>
+                  <input class="field__input" type="number" name="pet-weight" placeholder="7" required>
+                </label>
+                <label class="fieldset__field field">
+                  <span class="field__label">Возраст (лет):</span>
+                  <input class="field__input" type="number" name="pet-age" placeholder="7">
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="form__fieldset form__nutrition-programs fieldset">
+              <h3 class="fieldset__title visually-hidden">Программа питания</h3>
+              <div class="fieldset__wrapper">
+                <label class="fieldset__label pick">
+                  <input class="visually-hidden pick__input" type="radio" name="nutrition-programs" value="slim" checked>
+                  <span class="pick__mark pick__mark--circle"></span>
+                  <span class="pick__label">Похудение</span>
+                </label>
+                <label class="fieldset__label pick">
+                  <input class="visually-hidden pick__input" type="radio" name="nutrition-programs" value="pro">
+                  <span class="pick__mark pick__mark--circle"></span>
+                  <span class="pick__label">Набор массы</span>
+                </label>
+                <label class="fieldset__label pick">
+                  <input class="visually-hidden pick__input" type="radio" name="nutrition-programs" value="need-advice">
+                  <span class="pick__mark pick__mark--circle"></span>
+                  <span class="pick__label">Не знаю (нужен ваш совет)</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <fieldset class="form__fieldset form__contacts fieldset">
+            <h3 class="fieldset__title title title--line">Контактные данные (владельца кота)</h3>
+            <div class="fieldset__wrapper">
+              <label class="fieldset__field field">
+                <span class="field__label">E-mail:*</span>
+                <input class="field__input" type="email" name="owner-email" placeholder="kuklachev@gmail.com" required>
+              </label>
+              <label class="fieldset__field field">
+                <span class="field__label">Телефон:*</span>
+                <input class="field__input" type="tel" name="owner-phone" placeholder="8 (960) 900-60-90" required>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset form__comment fieldset">
+            <h3 class="fieldset__title title title--line">Комментарий</h3>
+            <div class="fieldset__wrapper">
+              <label class="fieldset__field field">
+                <textarea class="field__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="form__fieldset form__additionally fieldset">
+            <h3 class="fieldset__title title title--line">Дополнительно</h3>
+            <div class="fieldset__wrapper">
+              <label class="fieldset__label pick fieldset__checkbox">
+                <input class="visually-hidden pick__input" type="checkbox" name="sweetener" checked>
+                <span class="pick__mark pick__mark--square"></span>
+                <span class="pick__label">Сахарозаменитель</span>
+              </label>
+              <label class="fieldset__label pick">
+                <input class="visually-hidden pick__input" type="checkbox" name="drinking-water">
+                <span class="pick__mark pick__mark--square"></span>
+                <span class="pick__label">Питьевая вода</span>
+              </label>
+              <label class="fieldset__label pick">
+                <input class="visually-hidden pick__input" type="checkbox" name="milk">
+                <span class="pick__mark pick__mark--square"></span>
+                <span class="pick__label">Молоко</span>
+              </label>
+              <label class="fieldset__label pick">
+                <input class="visually-hidden pick__input" type="checkbox" name="vitamins">
+                <span class="pick__mark pick__mark--square"></span>
+                <span class="pick__label">Витамины</span>
+              </label>
+            </div>
+          </fieldset>
+          <div class="form__footer">
+            <button class="form__button button button--green" type="submit">Отправить заявку</button>
+            <small class="form__note">* — Обязательные поля</small>
+          </div>
+        </form>
       </div>
-      <form class="questionnaire__form form" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset class="form__fieldset fieldset">
-          <h3 class="visually-hidden">Информация о питомце</h3>
-          <label class="fieldset__field field">
-            <span class="field__label">Имя:*</span>
-            <input class="field__input" type="text" name="pet-name" value="БАРСИК" placeholder="БАРСИК" required>
-          </label>
-          <label class="fieldset__field field">
-            <span class="field__label">Вес (кг):*</span>
-            <input class="field__input" type="number" name="pet-weight" value="7" placeholder="7" required>
-          </label>
-          <label class="fieldset__field field">
-            <span class="field__label">Возраст (лет):</span>
-            <input class="field__input" type="number" name="pet-age" value="7" placeholder="7">
-          </label>
-        </fieldset>
-        <fieldset class="form__fieldset fieldset">
-          <h3 class="visually-hidden">Программа питания</h3>
-          <label class="fieldset__label pick">
-            <span class="pick__mark pick__mark--circle"></span>
-            <span class="pick__label">Похудение</span>
-            <input class="pick__input" type="radio" name="nutrition-programs" value="slim" checked>
-          </label>
-          <label class="fieldset__label pick">
-            <span class="pick__mark pick__mark--circle"></span>
-            <span class="pick__label">Набор массы</span>
-            <input class="pick__input" type="radio" name="nutrition-programs" value="pro">
-          </label>
-          <label class="fieldset__label pick">
-            <span class="pick__mark pick__mark--circle"></span>
-            <span class="pick__label">Не знаю (нужен ваш совет)</span>
-            <input class="pick__input" type="radio" name="nutrition-programs" value="need-advice">
-          </label>
-        </fieldset>
-        <fieldset class="form__fieldset fieldset">
-          <h3 class="fieldset__title title title--line">Контактные данные (владельца кота)</h3>
-          <label class="fieldset__field field">
-            <span class="field__label">E-mail:*</span>
-            <input class="field__input" type="email" name="owner-email" value="kuklachev@gmail.com" placeholder="kuklachev@gmail.com" required>
-          </label>
-          <label class="fieldset__field field">
-            <span class="field__label">Телефон:*</span>
-            <input class="field__input" type="tel" name="owner-phone" value="tel:89609006090" placeholder="8 (960) 900-60-90" required>
-          </label>
-        </fieldset>
-        <fieldset class="form__fieldset fieldset">
-          <h3 class="fieldset__title title title--line">Комментарий</h3>
-          <label class="fieldset__field field">
-            <input class="field__input" type="text" name="comment" placeholder="Расскажите обо всех повадках кота">
-          </label>
-        </fieldset>
-        <fieldset class="form__fieldset fieldset">
-          <h3 class="fieldset__title title title--line">Дополнительно</h3>
-          <label class="fieldset__label pick">
-            <span class="pick__mark pick__mark--square"></span>
-            <span class="pick__label">Сахарозаменитель</span>
-            <input class="pick__input" type="checkbox" name="sweetener" checked>
-          </label>
-          <label class="fieldset__label pick">
-            <span class="pick__mark pick__mark--square"></span>
-            <span class="pick__label">Питьевая вода</span>
-            <input class="pick__input" type="checkbox" name="drinking-water">
-          </label>
-          <label class="fieldset__label pick">
-            <span class="pick__mark pick__mark--square"></span>
-            <span class="pick__label">Молоко</span>
-            <input class="pick__input" type="checkbox" name="milk">
-          </label>
-          <label class="fieldset__label pick">
-            <span class="pick__mark pick__mark--square"></span>
-            <span class="pick__label">Витамины</span>
-            <input class="pick__input" type="checkbox" name="vitamins">
-          </label>
-        </fieldset>
-        <button class="form__button button button--green" type="submit">Отправить заявку</button>
-        <small class="form__note">* — Обязательные поля</small>
-      </form>
     </section>
     <section class="contacts">
       <div class="contacts__container">
