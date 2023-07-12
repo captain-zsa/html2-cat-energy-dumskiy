@@ -1,10 +1,31 @@
 .goods-card {
   padding: 13px 0 19px;
+  border-top: 1px solid #ebebeb;
+  display: grid;
+  row-gap: 11px;
+
+  &:last-child {
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  @include tablet-only {
+    border-right: 1px solid #ebebeb;
+    border-left: 1px solid #ebebeb;
+    padding: 26px 38px 28px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 25px;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    align-items: center;
+    padding: 13px 0 17px;
+  }
 }
 
 .goods-card__title {
   margin: 0;
-  margin-bottom: 13px;
   font-family: $spesial-font;
   font-size: 16px;
   font-weight: 400;
@@ -14,12 +35,22 @@
 
 .goods-card__price {
   margin: 0;
-  margin-bottom: 15px;
-  line-height: 14px;
-  color: $special-gray-darkness;
+  line-height: 20px;
+  color: $gray-70;
+  display: flex;
+  justify-content: space-between;
+
+  @include tablet-only {
+    justify-content: flex-end;
+    gap: 50px;
+  }
 }
 
 .goods-card__button {
   display: block;
   padding: 10px 0;
+
+  @include tablet-only {
+    grid-column: span 2;
+  }
 }

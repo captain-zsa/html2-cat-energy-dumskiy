@@ -1,13 +1,21 @@
 // COLORS
-$basic-green: #68b738;
-$basic-white: #ffffff;
-$basic-black: #000000;
-$basic-gray: #f2f2f2;
-$special-gray: #cdcdcd;
-$special-gray-light: #eaeaea;
-$special-gray-dark: #666666;
-$special-gray-darkness: #444444;
+$green: #68b738;
+$white: #ffffff;
+$black: #000000;
+$gray-10: #f2f2f2;
+$gray-20: #eaeaea;
+$gray-30: #e6e6e6;
+$gray-40: #d9d9d9;
+$gray-50: #cdcdcd;
+$gray-60: #666666;
+$gray-70: #444444;
 
 // FONTS
 $basic-font: "Lato", "Arial", sans-serif;
 $spesial-font: "Oswald", "Arial", sans-serif;
+
+// VIEWPORTS
+$mobile-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 1439px;
+$desktop: 1440px;

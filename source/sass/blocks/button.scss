@@ -5,15 +5,15 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  color: $basic-white;
+  color: $white;
   border: none;
 
   &--green {
-    background-color: $basic-green;
+    background-color: $green;
   }
 
   &--gray {
-    background-color: $basic-gray;
-    color: $special-gray-darkness;
+    background-color: $gray-10;
+    color: $gray-70;
   }
 }

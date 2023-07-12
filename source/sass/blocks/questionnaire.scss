@@ -1,5 +1,17 @@
+.questionnaire__container {
+  @include container;
+}
+
 .questionnaire__header {
-  padding: 27px 20px 39px;
+  padding: 27px 0 39px;
+
+  @include tablet {
+    padding: 64px 0 66px;
+  }
+
+  @include tablet {
+    padding-top: 73px;
+  }
 }
 
 .questionnaire__title {
@@ -7,10 +19,25 @@
   margin-bottom: 37px;
   font-size: 36px;
   line-height: 36px;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 54px;
+  }
+
+  @include desktop {
+    margin-bottom: 56px;
+  }
 }
 
 .questionnaire__subtitle {
   margin: 0;
   font-size: 14px;
   line-height: 18px;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

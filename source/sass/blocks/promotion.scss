@@ -1,27 +1,29 @@
 .promotion {
-  position: relative;
-
-  &::before {
-    content: "";
-    width: 279px;
-    height: 289px;
-    position: absolute;
-    display: block;
-    top: 0;
-    z-index: -1;
-    background: $basic-green url("../img/cat-case-background.jpg") no-repeat center center;
-  }
+  background: $green url("../img/cat-case-background.jpg") no-repeat center center;
 }
 
 .promotion__wrapper {
   padding: 59px 61px 43px 58px;
+
+  @include tablet {
+    padding: 71px 0 69px;
+  }
 }
 
 .promotion__text {
   margin: 0;
   margin-top: 128px;
-  color: $basic-white;
+  color: $white;
   text-align: center;
   font-size: 16px;
   line-height: 20px;
+
+  @include tablet-only {
+    margin: 0 auto;
+    width: 161px;
+  }
+
+  @include desktop {
+    margin-top: 104px;
+  }
 }

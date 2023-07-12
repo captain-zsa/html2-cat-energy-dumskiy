@@ -1,9 +1,41 @@
+.catalog__container {
+  max-width: 1220px;
+  margin: 0 auto;
+  width: 100%;
+
+  @include tablet {
+    @include container;
+  }
+}
+
 .catalog__title {
-  margin: 27px 0 41px 20px;
+  margin: 27px 20px 41px;
   font-size: 36px;
   line-height: 36px;
+
+  @include tablet {
+    margin: 64px 0 82px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @include desktop {
+    margin: 74px 0 84px;
+  }
 }
 
 .catalog__list {
   @include clear-list;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  @include tablet {
+    grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
+    gap: 60px;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    gap: 62px 80px;
+  }
 }

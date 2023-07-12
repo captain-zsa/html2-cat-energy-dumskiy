@@ -1,5 +1,8 @@
 .copyright {
   font-size: 16px;
-  color: $special-gray-darkness;
+  color: $gray-70;
   text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
