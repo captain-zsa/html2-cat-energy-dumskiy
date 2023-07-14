@@ -2,4 +2,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    .socials-link__icon {
+      fill: $green-10;
+    }
+  }
+
+  &:active {
+    .socials-link__icon {
+      fill: transparentize($green-10, 0.7);
+    }
+  }
+}
+
+.socials-link__icon {
+  fill: $gray-55;
 }

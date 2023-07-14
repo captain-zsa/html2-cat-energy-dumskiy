@@ -1,5 +1,9 @@
 .questionnaire__container {
   @include container;
+
+  @include tablet-only {
+    width: calc(100% - 140px);
+  }
 }
 
 .questionnaire__header {

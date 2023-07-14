@@ -1,29 +1,61 @@
 .programs-card {
   padding: 30px 20px 18px;
-  background-color: $gray-10;
+  background-color: $gray-5;
   position: relative;
 
   &::before {
     content: "";
     display: block;
-    width: 50px;
-    height: 50px;
     position: absolute;
-    top: 24px;
-    background-color: $green;
-    border-radius: 50%;
+  }
+
+  &--slim::before {
+    background: url("../img/icon/cat-slim.svg") no-repeat center center;
+
+    @include mobile-only {
+      width: 50px;
+      height: 53px;
+      top: 21px;
+      left: 22px;
+    }
 
     @include tablet-only {
       width: 200px;
-      height: 200px;
-      top: 92px;
+      height: 211px;
+      top: 81px;
       right: 62px;
     }
 
     @include desktop {
       width: 100px;
+      height: 106px;
+      top: 41px;
+      left: 52px;
+    }
+  }
+
+  &--pro::before {
+    background: url("../img/icon/cat-pro.svg") no-repeat center center;
+
+    @include mobile-only {
+      width: 67px;
+      height: 50px;
+      top: 24px;
+      left: 13px;
+    }
+
+    @include tablet-only {
+      width: 268px;
+      height: 220px;
+      top: 91px;
+      right: 28px;
+    }
+
+    @include desktop {
+      width: 134px;
       height: 100px;
       top: 47px;
+      left: 33px;
     }
   }
 
@@ -57,11 +89,11 @@
 .programs-card__description {
   margin: 0;
   margin-bottom: 18px;
-  color: $gray-70;
+  color: $gray-60;
 
   @include mobile-only {
     padding-bottom: 22px;
-    border-bottom: 1px solid $gray-40;
+    border-bottom: 1px solid $gray-30;
   }
 
   @include tablet {
@@ -72,15 +104,44 @@
 }
 
 .programs-card__link {
-  font-family: $spesial-font;
+  font-family: $special-font;
   text-decoration: none;
   font-size: 16px;
   line-height: 16px;
   color: inherit;
   text-transform: uppercase;
+  position: relative;
+  padding-right: 15px;
 
   @include tablet {
     font-size: 20px;
     line-height: 30px;
+    padding-right: 25px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 15px;
+    background: url("../img/icon/arrow.svg") no-repeat center center;
+
+    @include tablet {
+      margin-left: 25px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      background: url("../img/icon/arrow-long.svg") no-repeat center center;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

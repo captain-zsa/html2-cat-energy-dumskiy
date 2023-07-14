@@ -1,5 +1,102 @@
 .compare-slider {
-  position: relative;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.compare-slider__wrapper {
+  width: 140px;
+  height: 256px;
+  overflow: hidden;
+  position: relative;
+}
+
+.compare-slider__image {
+  position: absolute;
+  top: 0;
+
+  &--before {
+    left: 0;
+  }
+
+  &--after {
+    right: 0;
+  }
+}
+
+.compare-slider__control {
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: $white;
+    border: 2px solid $gray-55;
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    width: 4px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    background-color: $gray-55;
+    border-radius: 2px;
+    z-index: 1;
+  }
+
+  .compare-slider__triangles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    fill: $gray-55;
+  }
+
+  &:hover {
+    &::before {
+      border-color: $green-10;
+    }
+
+    &::after {
+      background-color: $green-10;
+    }
+
+    .compare-slider__triangles {
+      fill: $green-10;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: $green-20;
+      opacity: 0.6;
+    }
+
+    &::after {
+      background-color: $green-20;
+      opacity: 0.6;
+    }
+
+    .compare-slider__triangles {
+      fill: $green-20;
+      opacity: 0.6;
+    }
+  }
 }

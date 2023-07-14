@@ -1,13 +1,14 @@
 .field {
-  font-family: $spesial-font;
+  font-family: $special-font;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: $gray-70;
+  color: $gray-60;
   display: flex;
   column-gap: 13px;
   align-items: center;
   min-width: 280px;
+  position: relative;
 
   @include tablet {
     font-size: 20px;
@@ -18,12 +19,13 @@
 .field__label {
   min-width: max-content;
   flex-grow: 0;
+  cursor: pointer;
 }
 
 .field__input {
   @include clear-number;
   @include clear-input;
-  border: 1px solid #e7e7e7;
+  outline: 1px solid $gray-20;
   padding: 14px 52px 13px 20px;
   box-sizing: border-box;
   flex-grow: 1;
@@ -35,13 +37,43 @@
   @include tablet {
     padding: 11px 52px 11px 20px;
   }
+
+  &:hover {
+    outline-color: $gray-40;
+  }
+
+  &:focus {
+    outline: 2px solid $gray-60;
+  }
+
+  &:focus + .field__icon {
+    stroke: $green-10;
+  }
+
+  &:invalid {
+    outline: 2px solid $red;
+  }
+
+  &:invalid + .field__icon {
+    stroke: $red;
+  }
+}
+
+.field__icon {
+  position: absolute;
+  right: 15px;
+  stroke: $black-10;
+
+  @include tablet {
+    right: 18px;
+  }
 }
 
 .field__textarea {
   width: 100%;
   min-height: 150px;
   resize: none;
-  border: 1px solid #e7e7e7;
+  border: 1px solid $gray-20;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
