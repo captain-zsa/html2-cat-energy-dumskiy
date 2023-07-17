@@ -1,5 +1,5 @@
 .button {
-  font-family: $spesial-font;
+  font-family: $special-font;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
@@ -9,11 +9,29 @@
   border: none;
 
   &--green {
-    background-color: $green;
+    background-color: $green-10;
+
+    &:hover {
+      background-color: $green-20;
+    }
+
+    &:active {
+      background-color: $green-20;
+      color: transparentize($white, 0.7);
+    }
   }
 
   &--gray {
-    background-color: $gray-10;
-    color: $gray-70;
+    background-color: $gray-5;
+    color: $gray-60;
+
+    &:hover {
+      background-color: $gray-10;
+    }
+
+    &:active {
+      background-color: $gray-10;
+      color: transparentize($gray-60, 0.7);
+    }
   }
 }

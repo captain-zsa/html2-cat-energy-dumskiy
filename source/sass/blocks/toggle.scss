@@ -1,0 +1,55 @@
+.toggle {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+  flex-direction: column;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.toggle__checkbox {
+  margin: 0;
+  width: 24px;
+  height: 19px;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.toggle__span {
+  width: 25px;
+  height: 2px;
+  background-color: $black;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+
+  &--first {
+    transform-origin: left top;
+    top: 0;
+  }
+
+  &--third {
+    transform-origin: left bottom;
+    bottom: 0;
+  }
+}
+
+.toggle input:checked ~ .toggle__span {
+  &--first {
+    transform: translateX(6%) rotate(45deg);
+  }
+
+  &--second {
+    transform: translateX(-12%) rotate(495deg);
+    opacity: 0;
+  }
+
+  &--third {
+    transform: translateX(6%) rotate(-45deg);
+  }
+}

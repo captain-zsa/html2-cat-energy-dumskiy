@@ -16,15 +16,44 @@
 }
 
 .additionally-product__title {
-  margin: 0;
   margin-bottom: 36px;
   font-size: 24px;
   line-height: 24px;
+  position: relative;
 
   @include tablet {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 80px;
+  }
+
+  span {
+    display: block;
+    width: fit-content;
+    background-color: $white;
+    padding: 0 21px 0 20px;
+    margin-left: -20px;
+
+    @include tablet {
+      padding: 0 36px 0 37px;
+      margin-left: 0;
+    }
+
+    @include desktop {
+      padding: 0 35px 0 40px;
+      margin-left: -40px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100vw;
+    background-color: $green-10;
+    top: 60%;
+    z-index: -1;
+    left: calc((100vw - 100%) / -2);
   }
 }
 

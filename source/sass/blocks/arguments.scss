@@ -1,5 +1,5 @@
 .arguments {
-  font-family: $spesial-font;
+  font-family: $special-font;
   text-align: center;
   text-transform: uppercase;
 }
@@ -39,7 +39,7 @@
 .arguments__item {
   padding: 14px 0 17px;
   position: relative;
-  border: 1px solid $gray-50;
+  border: 1px solid $gray-40;
   border-radius: 3px;
   box-sizing: border-box;
 
@@ -71,7 +71,7 @@
   top: 46px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: $gray-20;
+  background-color: $gray-15;
 
   @include tablet-only {
     background-color: $white;

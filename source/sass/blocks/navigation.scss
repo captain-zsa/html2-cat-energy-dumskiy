@@ -1,5 +1,5 @@
 .navigation {
-  font-family: $spesial-font;
+  font-family: $special-font;
   text-transform: uppercase;
   text-align: center;
   font-size: 20px;
@@ -7,7 +7,6 @@
 
   @include mobile-only {
     font-weight: 500;
-    display: none;
   }
 }
 
@@ -31,10 +30,10 @@
 
 .navigation__item {
   @include mobile-only {
-    border-top: 1px solid $gray-30;
+    border-top: 1px solid $gray-25;
 
     &:last-child {
-      border-bottom: 1px solid $gray-30;
+      border-bottom: 1px solid $gray-25;
     }
   }
 }
@@ -49,14 +48,26 @@
     padding: 18px 0 8px;
 
     &:not([href]) {
-      border-bottom: 2px solid $green;
+      border-bottom: 2px solid $green-10;
       box-sizing: border-box;
     }
   }
 
   @include desktop {
     &:not([href]) {
-      border-bottom: 2px solid $green;
+      border-bottom: 2px solid $green-10;
+    }
+  }
+
+  &[href] {
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

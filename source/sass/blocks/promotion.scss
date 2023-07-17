@@ -1,12 +1,33 @@
 .promotion {
-  background: $green url("../img/cat-case-background.jpg") no-repeat center center;
+  background: $green-10 url("../img/cat-case-background.jpg") no-repeat center center;
 }
 
 .promotion__wrapper {
   padding: 59px 61px 43px 58px;
+  position: relative;
 
-  @include tablet {
-    padding: 71px 0 69px;
+  @include tablet-only {
+    padding: 71px 124px 69px 77px;
+  }
+
+  @include desktop {
+    padding: 56px 43px 42px 50px;
+  }
+
+  &::before {
+    content: "";
+    width: 78px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../img/icon/gift.svg") no-repeat center center;
+
+    @include tablet-only {
+      left: 77px;
+      top: 57px;
+      transform: none;
+    }
   }
 }
 
@@ -19,11 +40,9 @@
   line-height: 20px;
 
   @include tablet-only {
-    margin: 0 auto;
+    margin: 0;
+    margin-left: auto;
     width: 161px;
-  }
-
-  @include desktop {
-    margin-top: 104px;
+    text-align: left;
   }
 }

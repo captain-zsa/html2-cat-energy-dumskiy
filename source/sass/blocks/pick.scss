@@ -1,10 +1,10 @@
 .pick {
-  font-family: $spesial-font;
+  font-family: $special-font;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: $gray-70;
-
+  color: $black-10;
+  cursor: pointer;
   display: flex;
   align-items: center;
 
@@ -12,12 +12,33 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  &:hover > .pick__mark {
+    outline-color: $gray-45;
+  }
+}
+
+.pick__input {
+  &:checked + .pick__mark {
+    &--circle {
+      background-color: $green-10;
+    }
+
+    &--square {
+      background: url("../img/icon/tick.svg") no-repeat center center;
+    }
+  }
+
+  &:disabled ~ .pick__mark,
+  &:disabled ~ .pick__label {
+    opacity: 0.3;
+  }
 }
 
 .pick__mark {
   width: 30px;
   height: 30px;
-  outline: 1px solid $gray-50;
+  outline: 1px solid $gray-40;
   box-sizing: border-box;
   margin-right: 15px;
 
@@ -33,15 +54,5 @@
     @include tablet {
       border-width: 10px;
     }
-  }
-}
-
-.pick__input:checked + .pick__mark {
-  &--circle {
-    background-color: $green;
-  }
-
-  &--square {
-    background: url("../img/icon/tick.svg") no-repeat center center;
   }
 }
