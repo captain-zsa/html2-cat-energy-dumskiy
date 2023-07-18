@@ -74,7 +74,6 @@
 .product-card__link {
   text-decoration: none;
   color: inherit;
-  position: relative;
 
   &:nth-child(2) {
     @include mobile-only {
@@ -84,7 +83,6 @@
 
     @include tablet {
       order: -1;
-      min-height: 200px;
       margin-bottom: 34px;
     }
 
@@ -117,7 +115,7 @@
     }
 
     @include tablet {
-      margin: 0 auto 21px auto;
+      margin: 0 auto 14px auto;
       text-align: center;
       width: 155px;
     }
@@ -130,13 +128,12 @@
 }
 
 .product-card__image {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  height: auto;
+  display: block;
+  margin: 0 auto;
 
-  @include mobile-only {
-    top: 50%;
-    transform: translate(-50%, -50%);
+  @include tablet {
+    width: 168px;
   }
 }
 

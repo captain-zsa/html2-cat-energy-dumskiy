@@ -9,6 +9,10 @@
     display: flex;
     justify-content: space-between;
   }
+
+  @include desktop {
+    margin-top: 54px;
+  }
 }
 
 .main-header__wrapper {
