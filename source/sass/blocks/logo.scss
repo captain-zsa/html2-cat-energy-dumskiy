@@ -29,6 +29,26 @@
   }
 }
 
+.logo__icon-picture {
+  display: block;
+
+  @include tablet {
+    width: 174px;
+    height: 52px;
+  }
+
+  @include desktop {
+    width: 202px;
+    height: 59px;
+  }
+}
+
+.logo__icon-text {
+  @include tablet {
+    display: none;
+  }
+}
+
 .logo__image {
   display: block;
   margin: 0 auto;

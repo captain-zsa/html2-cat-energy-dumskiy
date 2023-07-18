@@ -11,6 +11,7 @@
 
   &--slim::before {
     background: url("../img/icon/cat-slim.svg") no-repeat center center;
+    background-size: 100% auto;
 
     @include mobile-only {
       width: 50px;
@@ -36,6 +37,7 @@
 
   &--pro::before {
     background: url("../img/icon/cat-pro.svg") no-repeat center center;
+    background-size: 100% auto;
 
     @include mobile-only {
       width: 67px;

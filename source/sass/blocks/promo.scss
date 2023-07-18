@@ -12,16 +12,34 @@
     width: 100%;
     height: 302px;
     z-index: -1;
-    background: $green-10 url("../img/cat-background.jpg") no-repeat center center;
+    background: $green-10 url("../img/cat-background-mobile@1x.jpg") no-repeat center center;
+
+    @include resolution {
+      background-image: url("../img/cat-background-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
+
+    @include tablet-only {
+      display: none;
+    }
+
+    @include desktop {
+      width: 50%;
+      top: -113px;
+      height: 694px;
+      left: 50%;
+      background-image: url("../img/cat-background-desktop@1x.jpg");
+      background-position: left center;
+
+      @include resolution {
+        background-image: url("../img/cat-background-desktop@2x.jpg");
+      }
+    }
   }
 
   @include tablet {
     color: inherit;
     text-align: inherit;
-
-    &::before {
-      display: none;
-    }
   }
 }
 
@@ -39,7 +57,7 @@
   }
 
   @include desktop {
-    padding: 82px 80px;
+    padding: 111px 80px;
   }
 }
 
@@ -76,13 +94,24 @@
 
 .promo__image {
   position: absolute;
-  bottom: 43px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
+
+  @include mobile-only {
+    bottom: 43px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   @include tablet {
-    display: none;
+    width: 709px;
+    height: auto;
+    z-index: -1;
+    bottom: 0;
+  }
+
+  @include desktop {
+    top: 29px;
+    width: 552px;
+    left: 448px;
   }
 }
 
@@ -101,6 +130,6 @@
   }
 
   @include desktop {
-    margin-bottom: 103px;
+    margin-bottom: 74px;
   }
 }

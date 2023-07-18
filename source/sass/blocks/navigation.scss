@@ -53,12 +53,6 @@
     }
   }
 
-  @include desktop {
-    &:not([href]) {
-      border-bottom: 2px solid $green-10;
-    }
-  }
-
   &[href] {
     &:hover,
     &:focus {
@@ -69,5 +63,13 @@
     &:active {
       opacity: 0.3;
     }
+  }
+}
+
+.navigation__link--color-invert {
+  color: $white;
+
+  &:not([href]) {
+    border-color: $white;
   }
 }

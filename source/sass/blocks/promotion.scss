@@ -1,5 +1,28 @@
 .promotion {
-  background: $green-10 url("../img/cat-case-background.jpg") no-repeat center center;
+  background: $green-10 url("../img/cat-case-background-mobile@1x.jpg") no-repeat center center;
+
+  @include resolution {
+    background-image: url("../img/cat-case-background-mobile@2x.jpg");
+    background-size: 280px auto;
+  }
+
+  @include tablet {
+    background-image: url("../img/cat-case-background-tablet@1x.jpg");
+
+    @include resolution {
+      background-image: url("../img/cat-case-background-tablet@2x.jpg");
+      background-size: 707px auto;
+    }
+  }
+
+  @include desktop {
+    background-image: url("../img/cat-case-background-desktop@1x.jpg");
+
+    @include resolution {
+      background-image: url("../img/cat-case-background-desktop@2x.jpg");
+      background-size: 246px auto;
+    }
+  }
 }
 
 .promotion__wrapper {
