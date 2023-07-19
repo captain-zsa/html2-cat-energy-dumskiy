@@ -47,7 +47,7 @@
   }
 
   &:focus + .field__icon {
-    stroke: $green-10;
+    background-color: $green-10;
   }
 
   &:invalid {
@@ -55,17 +55,27 @@
   }
 
   &:invalid + .field__icon {
-    stroke: $red;
+    background-color: $red;
   }
 }
 
 .field__icon {
   position: absolute;
+  width: 20px;
+  height: 20px;
   right: 15px;
-  stroke: $black-10;
+  background-color: $black-10;
 
   @include tablet {
     right: 18px;
+  }
+
+  &--email {
+    mask-image: url("../img/icon/sprite.svg#email");
+  }
+
+  &--phone {
+    mask-image: url("../img/icon/sprite.svg#phone");
   }
 }
 

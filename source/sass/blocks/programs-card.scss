@@ -124,12 +124,13 @@
   &::after {
     content: "";
     position: absolute;
-    width: 32px;
+    width: 24px;
     height: 10px;
     top: 50%;
     transform: translateY(-50%);
     margin-left: 15px;
-    background: url("../img/icon/arrow.svg") no-repeat center center;
+    mask-image: url("../img/icon/sprite.svg#arrow-right");
+    background-color: #000000;
 
     @include tablet {
       margin-left: 25px;
@@ -139,7 +140,7 @@
   &:hover,
   &:focus {
     &::after {
-      background: url("../img/icon/arrow-long.svg") no-repeat center center;
+      width: 32px;
     }
   }
 

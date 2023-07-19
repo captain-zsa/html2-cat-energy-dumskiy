@@ -6,26 +6,11 @@
   &:hover,
   &:focus {
     outline: none;
-
-    .logo__image {
-      fill: $gray-65;
-    }
-
-    .logo__icon-picture,
-    .logo__icon-text {
-      opacity: 0.8;
-    }
+    opacity: 0.8;
   }
 
   &:active {
-    .logo__image {
-      fill: $gray-50;
-    }
-
-    .logo__icon-picture,
-    .logo__icon-text {
-      opacity: 0.6;
-    }
+    opacity: 0.6;
   }
 }
 

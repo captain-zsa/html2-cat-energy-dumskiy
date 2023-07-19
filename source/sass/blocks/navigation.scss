@@ -67,9 +67,11 @@
 }
 
 .navigation__link--color-invert {
-  color: $white;
+  @include desktop {
+    color: $white;
 
-  &:not([href]) {
-    border-color: $white;
+    &:not([href]) {
+      border-color: $white;
+    }
   }
 }

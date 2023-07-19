@@ -8,7 +8,7 @@
   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/favicon-apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
   <header class="main-header">
@@ -18,9 +18,9 @@
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="logo__icon-picture" src="img/logo-mobile-icon.svg" width="34" height="38" alt="Логотип Cat Energy.">
+            <img class="logo__icon-picture" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип Cat Energy.">
           </picture>
-          <img class="logo__icon-text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Текстовый логотип Cat Energy.">
+          <img class="logo__icon-text" src="img/logo-text.svg" width="101" height="18" alt="Текстовый логотип Cat Energy.">
         </a>
         <div class="main-header__toggle main-header__toggle--nojs toggle">
           <span class="visually-hidden">Открыть меню</span>
@@ -55,7 +55,7 @@
         </div>
         <picture>
           <source media="(min-width: 1440px)" srcset="img/cat-energy-chicken-promo-desktop@1x.png 1x, img/cat-energy-chicken-promo-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/cat-energy-chicken-promo-tablet@1x.png 1x, img/cat-energy-chicken-promo-tablet@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/cat-energy-chicken-promo-tablet@1x.jpg 1x, img/cat-energy-chicken-promo-tablet@2x.jpg 2x">
           <img class="promo__image" src="img/cat-energy-chicken-promo-mobile@1x.png" srcset="img/cat-energy-chicken-promo-mobile@2x.png 2x" width="280" height="270" alt="Банка с питанием Cat Energy Pro со вкусом курицы.">
         </picture>
       </div>
@@ -131,7 +131,7 @@
           </div>
           <span class="compare-slider__control">
             <svg class="compare-slider__triangles" width="24" height="18">
-              <use href="img/icon/sprite.svg#compare-slider-triangles"></use>
+              <use href="img/icon/sprite.svg#triangles"></use>
             </svg>
           </span>
           <div class="compare-slider__wrapper">
@@ -159,45 +159,30 @@
     <div class="main-footer__container">
       <h2 class="visually-hidden">Полезные ссылки</h2>
       <a class="main-footer__logo logo" href="#" aria-label="Главная страница">
-        <svg class="logo__image" width="129" height="24">
-          <use href="img/icon/sprite.svg#logo-image"></use>
-        </svg>
+        <img class="logo__image" src="img/logo-text.svg" width="129" height="24" alt="Текстовый логотип Cat Energy.">
       </a>
       <ul class="main-footer__socials-list socials-list" aria-label="Мы в социальных сетях">
         <li class="socials-list__item">
-          <a class="socials-list__link socials-link" href="#">
-            <svg class="socials-link__icon" width="29" height="22">
-              <use href="img/icon/sprite.svg#socials-icon-vkontakte"></use>
-            </svg>
+          <a class="socials-list__link socials-link socials-link--vkontakte" href="#">
             <span class="visually-hidden">ВКонтакте</span>
           </a>
         </li>
         <li class="socials-list__item">
-          <a class="socials-list__link socials-link" href="#">
-            <svg class="socials-link__icon" width="29" height="22">
-              <use href="img/icon/sprite.svg#socials-icon-youtube"></use>
-            </svg>
+          <a class="socials-list__link socials-link socials-link--youtube" href="#">
             <span class="visually-hidden">YouTube</span>
           </a>
         </li>
         <li class="socials-list__item">
-          <a class="socials-list__link socials-link" href="#">
-            <svg class="socials-link__icon" width="29" height="22">
-              <use href="img/icon/sprite.svg#socials-icon-telegram"></use>
-            </svg>
+          <a class="socials-list__link socials-link socials-link--telegram" href="#">
             <span class="visually-hidden">Телеграм</span>
           </a>
         </li>
       </ul>
       <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт разработчика данного сайта">
-        <span class="copyright__text">HTML Academy</span>
-        <svg class="copyright__icon" width="27" height="34">
-          <use href="img/icon/sprite.svg#html-academy-icon"></use>
-        </svg>
+        <span>HTML Academy</span>
       </a>
     </div>
   </footer>
-
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
