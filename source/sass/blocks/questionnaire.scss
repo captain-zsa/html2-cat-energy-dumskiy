@@ -1,20 +1,34 @@
 .questionnaire__container {
   @include container;
 
+  @include mobile-only {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      top: 0;
+      left: -20px;
+      background-color: $gray-10;
+    }
+  }
+
   @include tablet-only {
     width: calc(100% - 140px);
   }
 }
 
 .questionnaire__header {
-  padding: 27px 0 39px;
+  padding: 28px 0 39px;
 
   @include tablet {
     padding: 64px 0 66px;
   }
 
   @include tablet {
-    padding-top: 73px;
+    padding: 75px 0 65px;
   }
 }
 
@@ -39,6 +53,7 @@
   margin: 0;
   font-size: 14px;
   line-height: 18px;
+  text-transform: uppercase;
 
   @include tablet {
     font-size: 20px;

@@ -11,7 +11,7 @@
   }
 
   @include desktop {
-    margin-top: 54px;
+    margin-top: 53px;
   }
 }
 
@@ -31,6 +31,8 @@
 }
 
 .main-header__toggle {
+  margin-top: 4px;
+
   &--nojs {
     display: none;
   }

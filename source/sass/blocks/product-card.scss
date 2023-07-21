@@ -38,7 +38,7 @@
   }
 
   @include desktop {
-    padding: 0 30px 40px 35px;
+    padding: 0 35px 40px 40px;
   }
 
   &--empty {
@@ -46,8 +46,9 @@
     position: relative;
 
     @include tablet {
+      margin-top: 82px;
       border: 2px solid $gray-5;
-      padding: 52px 37px 38px;
+      padding: 50px 37px 36px;
     }
   }
 }
@@ -61,7 +62,7 @@
   }
 
   @include tablet {
-    margin: -73px 0 33px;
+    margin: -73px 0 32px;
     display: flex;
     flex-direction: column;
   }
@@ -87,7 +88,7 @@
     }
 
     @include desktop {
-      margin-bottom: 46px;
+      margin-bottom: 44px;
     }
   }
 }
@@ -100,11 +101,25 @@
   line-height: 20px;
   text-transform: uppercase;
 
+  @include tablet {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include desktop {
+    line-height: 21px;
+  }
+
   &--empty {
     margin: 59px 0 8px;
 
     @include tablet {
-      margin: 110px 0 23px;
+      line-height: 22px;
+      margin: 109px 34px 23px;
+    }
+
+    @include desktop {
+      margin: 108px 0 23px;
     }
   }
 
@@ -119,11 +134,10 @@
       text-align: center;
       width: 155px;
     }
-  }
 
-  @include tablet {
-    font-size: 20px;
-    line-height: 24px;
+    @include desktop {
+      margin-bottom: 17px;
+    }
   }
 }
 
@@ -146,6 +160,7 @@
 
   @include tablet {
     font-size: 16px;
+    margin: 0;
   }
 }
 
@@ -154,8 +169,12 @@
   justify-content: space-between;
 
   @include tablet {
-    padding: 7px 0 9px;
+    padding: 7px 6px 8px 1px;
     border-bottom: 1px solid $gray-40;
+
+    &:nth-child(2) {
+      padding-right: 0;
+    }
   }
 
   td {
@@ -165,7 +184,16 @@
 
 .product-card__button {
   display: block;
+  box-sizing: border-box;
   padding: 10px 0;
+
+  @include tablet-only {
+    margin: 0 1px 0 3px;
+  }
+
+  @include desktop {
+    margin: 0 3px 0 -1px;
+  }
 }
 
 .product-card__description {
@@ -178,7 +206,11 @@
   @include tablet {
     font-size: 16px;
     line-height: 18px;
-    margin-bottom: 87px;
+    margin: 0 10px 87px;
+  }
+
+  @include desktop {
+    margin: 0 0 87px;
   }
 }
 
@@ -198,17 +230,21 @@
   &::after {
     content: "";
     position: absolute;
-    width: 2px;
-    height: 100%;
     background-color: $gray-35;
   }
 
   &::before {
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &::after {
-    transform: rotate(90deg);
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

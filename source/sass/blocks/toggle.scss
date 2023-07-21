@@ -41,7 +41,7 @@
 
 .toggle input:checked ~ .toggle__span {
   &--first {
-    transform: translateX(6%) rotate(45deg);
+    transform: translateX(15%) rotate(45deg);
   }
 
   &--second {
@@ -50,6 +50,6 @@
   }
 
   &--third {
-    transform: translateX(6%) rotate(-45deg);
+    transform: translateX(15%) rotate(-45deg);
   }
 }

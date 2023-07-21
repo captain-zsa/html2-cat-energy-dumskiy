@@ -3,6 +3,14 @@
   background-color: $gray-5;
   position: relative;
 
+  @include tablet-only {
+    padding: 77px 316px 57px 52px;
+  }
+
+  @include desktop {
+    padding: 77px 65px 59px 52px;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -23,21 +31,21 @@
     @include tablet-only {
       width: 200px;
       height: 211px;
-      top: 81px;
+      top: 78px;
       right: 62px;
     }
 
     @include desktop {
       width: 100px;
       height: 106px;
-      top: 41px;
+      top: 40px;
       left: 52px;
     }
   }
 
   &--pro::before {
     background: url("../img/icon/cat-pro.svg") no-repeat center center;
-    background-size: 100% auto;
+    background-size: cover;
 
     @include mobile-only {
       width: 67px;
@@ -48,30 +56,22 @@
 
     @include tablet-only {
       width: 268px;
-      height: 220px;
+      height: 200px;
       top: 91px;
-      right: 28px;
+      right: 29px;
     }
 
     @include desktop {
       width: 134px;
       height: 100px;
-      top: 47px;
-      left: 33px;
+      top: 46px;
+      left: 34px;
     }
-  }
-
-  @include tablet-only {
-    padding: 77px 316px 57px 52px;
-  }
-
-  @include desktop {
-    padding: 77px 67px 59px 52px;
   }
 }
 
 .programs-card__title {
-  margin: 0 0 29px 69px;
+  margin: 0 0 30px 71px;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
@@ -102,6 +102,10 @@
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 52px;
+  }
+
+  @include desktop {
+    margin-bottom: 27px;
   }
 }
 

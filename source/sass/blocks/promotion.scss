@@ -1,27 +1,30 @@
 .promotion {
-  background: $green-10 url("../img/cat-case-background-mobile@1x.jpg") no-repeat center center;
-
-  @include resolution {
-    background-image: url("../img/cat-case-background-mobile@2x.jpg");
-    background-size: 280px auto;
-  }
+  background-image: image-set(
+    url("../img/cat-case-background-mobile@2x.webp") type("image/webp") 2x,
+    url("../img/cat-case-background-mobile@1x.webp") type("image/webp") 1x,
+    url("../img/cat-case-background-mobile@2x.jpg") 2x,
+    url("../img/cat-case-background-mobile@1x.jpg") 1x
+  );
+  background-color: $green-10;
+  background-repeat: no-repeat;
+  background-position: center center;
 
   @include tablet {
-    background-image: url("../img/cat-case-background-tablet@1x.jpg");
-
-    @include resolution {
-      background-image: url("../img/cat-case-background-tablet@2x.jpg");
-      background-size: 707px auto;
-    }
+    background-image: image-set(
+      url("../img/cat-case-background-tablet@2x.webp") type("image/webp") 2x,
+      url("../img/cat-case-background-tablet@1x.webp") type("image/webp") 1x,
+      url("../img/cat-case-background-tablet@2x.jpg") 2x,
+      url("../img/cat-case-background-tablet@1x.jpg") 1x
+    );
   }
 
   @include desktop {
-    background-image: url("../img/cat-case-background-desktop@1x.jpg");
-
-    @include resolution {
-      background-image: url("../img/cat-case-background-desktop@2x.jpg");
-      background-size: 246px auto;
-    }
+    background-image: image-set(
+      url("../img/cat-case-background-desktop@2x.webp") type("image/webp") 2x,
+      url("../img/cat-case-background-desktop@1x.webp") type("image/webp") 1x,
+      url("../img/cat-case-background-desktop@2x.jpg") 2x,
+      url("../img/cat-case-background-desktop@1x.jpg") 1x
+    );
   }
 }
 
@@ -34,7 +37,7 @@
   }
 
   @include desktop {
-    padding: 56px 43px 42px 50px;
+    padding: 56px 43px 42px 41px;
   }
 
   &::before {
@@ -67,5 +70,9 @@
     margin-left: auto;
     width: 161px;
     text-align: left;
+  }
+
+  @include desktop {
+    margin-top: 130px;
   }
 }

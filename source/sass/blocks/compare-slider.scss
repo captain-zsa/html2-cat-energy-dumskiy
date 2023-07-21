@@ -1,19 +1,21 @@
-.compare-slider {
+.compare-slider__container {
   display: flex;
   justify-content: center;
   position: relative;
+  width: 280px;
+  height: 256px;
+
+  @include tablet {
+    width: 560px;
+    height: 512px;
+  }
 }
 
 .compare-slider__wrapper {
-  width: 140px;
-  height: 256px;
+  width: 50%;
+  height: 100%;
   overflow: hidden;
   position: relative;
-
-  @include tablet {
-    width: 280px;
-    height: 512px;
-  }
 }
 
 .compare-slider__image {
@@ -22,7 +24,7 @@
 
   @include tablet {
     width: 560px;
-    height: 100%;
+    height: auto;
   }
 
   &--before {
