@@ -25,6 +25,8 @@
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img class="logo__icon-picture" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип Cat Energy.">
           </picture>
+        </a>
+        <a class="main-header__logo logo">
           <img class="logo__icon-text" src="img/logo-text.svg" width="101" height="18" alt="Текстовый логотип Cat Energy.">
         </a>
         <div class="main-header__toggle main-header__toggle--nojs toggle">
@@ -54,7 +56,7 @@
     <section class="promo">
       <div class="promo__container">
         <div class="promo__wrapper">
-          <h1 class="promo__title title">Функциональное<br>питание для котов</h1>
+          <h1 class="promo__title">Функциональное<br>питание для котов</h1>
           <p class="promo__tagline">Занялся собой? Займись котом!</p>
           <a class="promo__button button button--green" href="form.html">Подобрать программу</a>
         </div>
@@ -73,12 +75,12 @@
         <h2 class="visually-hidden">Программы питания</h2>
         <ul class="nutrition-programs__list">
           <li class="nutrition-programs__item programs-card programs-card--slim">
-            <h3 class="programs-card__title title">Похудение</h3>
+            <h3 class="programs-card__title">Похудение</h3>
             <p class="programs-card__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="programs-card__link" href="catalog.html">Каталог Slim</a>
           </li>
           <li class="nutrition-programs__item programs-card programs-card--pro">
-            <h3 class="programs-card__title title">Набор массы</h3>
+            <h3 class="programs-card__title">Набор массы</h3>
             <p class="programs-card__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="programs-card__link" href="catalog.html">Каталог Pro</a>
           </li>
@@ -87,7 +89,7 @@
     </section>
     <section class="principle-work">
       <div class="principle-work__container">
-        <h2 class="principle-work__title title">Как это работает</h2>
+        <h2 class="principle-work__title">Как это работает</h2>
         <ul class="principle-work__list">
           <li class="principle-work__item principle-work__item--leaf">
             <p class="principle-work__description">
@@ -115,7 +117,7 @@
     <section class="living-example">
       <div class="living-example__container">
         <div class="living-example__wrapper">
-          <h2 class="living-example__title title">Живой пример</h2>
+          <h2 class="living-example__title">Живой пример</h2>
           <p class="living-example__description">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
@@ -148,11 +150,9 @@
                 <img class="compare-slider__image compare-slider__image--before" loading="lazy" src="img/cat-before-mobile@1x.png" srcset="img/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис до приема корма Cat Energy Slim.">
               </picture>
             </div>
-            <span class="compare-slider__control">
-              <svg class="compare-slider__triangles" width="24" height="18">
-                <use href="img/icon/sprite.svg#triangles"></use>
-              </svg>
-            </span>
+            <div class="compare-slider__control">
+              <div class="compare-slider__thumb"></div>
+            </div>
             <div class="compare-slider__wrapper">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-after-tablet@1x.webp 1x, img/cat-after-tablet@2x.webp 2x">
@@ -167,17 +167,15 @@
     </section>
     <section class="contacts">
       <div class="contacts__container">
-        <div class="contacts__wrapper">
-          <div class="contacts__header">
-            <h2 class="contacts__title title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
-            <address class="contacts__address">
-              <span>ул. Большая<br>Конюшенная, д. 19/8</span>
-              <span>Санкт-Петербург</span>
-            </address>
-          </div>
-          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.3208341612317!2d30.32175993776117!3d59.93777685657714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1687970077901!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Гугл карта с меткой нашего расположения."></iframe>
+        <div class="contacts__header">
+          <h2 class="contacts__title">Приглашаем<br>к сотрудничеству<br>дилеров!</h2>
+          <address class="contacts__address">
+            <span>ул. Большая<br>Конюшенная, д. 19/8</span>
+            <span>Санкт-Петербург</span>
+          </address>
         </div>
       </div>
+      <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.3208341612317!2d30.32175993776117!3d59.93777685657714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1687970077901!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Гугл карта с меткой нашего расположения."></iframe>
     </section>
   </main>
   <footer class="main-footer">

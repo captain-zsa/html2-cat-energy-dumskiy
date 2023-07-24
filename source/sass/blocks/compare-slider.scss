@@ -46,8 +46,7 @@
   cursor: pointer;
   box-sizing: border-box;
 
-  &::before {
-    content: "";
+  .compare-slider__thumb {
     width: 40px;
     height: 40px;
     top: 50%;
@@ -59,6 +58,19 @@
     border-radius: 50%;
     box-sizing: border-box;
     z-index: 2;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    background-color: $gray-55;
+    mask-image: url("../img/icon/sprite.svg#triangles");
   }
 
   &::after {
@@ -74,32 +86,23 @@
     box-sizing: border-box;
   }
 
-  .compare-slider__triangles {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    fill: $gray-55;
-  }
-
   &:hover {
     &::before {
-      border-color: $green-10;
+      background-color: $green-10;
     }
 
     &::after {
       background-color: $green-10;
     }
 
-    .compare-slider__triangles {
-      fill: $green-10;
+    .compare-slider__thumb {
+      border-color: $green-10;
     }
   }
 
   &:active {
     &::before {
-      border-color: $green-20;
+      background-color: $green-20;
       opacity: 0.6;
     }
 
@@ -108,8 +111,8 @@
       opacity: 0.6;
     }
 
-    .compare-slider__triangles {
-      fill: $green-20;
+    .compare-slider__thumb {
+      border-color: $green-20;
       opacity: 0.6;
     }
   }

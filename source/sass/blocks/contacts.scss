@@ -1,13 +1,14 @@
-.contacts__container {
-  width: 100%;
-  max-width: $desktop;
-  margin: 0 auto;
+.contacts {
+  position: relative;
 }
 
-.contacts__wrapper {
+.contacts__container {
+  max-width: $desktop;
+  margin: 0 auto;
+  box-sizing: border-box;
+
   @include desktop {
     padding: 95px 110px 107px;
-    position: relative;
   }
 }
 
@@ -33,6 +34,8 @@
 }
 
 .contacts__title {
+  font-family: $special-font;
+  font-weight: 400;
   margin: 0;
   font-size: 16px;
   line-height: 20px;

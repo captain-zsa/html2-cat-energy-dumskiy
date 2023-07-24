@@ -23,7 +23,6 @@
 }
 
 .field__input {
-  @include clear-number;
   @include clear-input;
   outline: 1px solid $gray-20;
   padding: 14px 50px 13px 20px;
@@ -49,6 +48,14 @@
     }
   }
 
+  &[type="number"] {
+    appearance: textfield;
+  }
+
+  &::placeholder {
+    color: inherit;
+  }
+
   &:hover {
     outline-color: $gray-40;
   }
@@ -61,11 +68,11 @@
     background-color: $green-10;
   }
 
-  &:invalid {
+  &:not(:placeholder-shown):invalid {
     outline: 2px solid $red;
   }
 
-  &:invalid + .field__icon {
+  &:not(:placeholder-shown):invalid + .field__icon {
     background-color: $red;
   }
 }
@@ -106,5 +113,17 @@
   @include tablet {
     min-height: 174px;
     padding: 10px 19px;
+  }
+
+  &:hover {
+    border-color: $gray-40;
+  }
+
+  &:focus {
+    outline: 2px solid $gray-60;
+  }
+
+  &:not(:placeholder-shown):invalid {
+    outline: 2px solid $red;
   }
 }

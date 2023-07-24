@@ -27,12 +27,14 @@
     padding: 64px 0 66px;
   }
 
-  @include tablet {
+  @include desktop {
     padding: 75px 0 65px;
   }
 }
 
 .questionnaire__title {
+  font-family: $special-font;
+  font-weight: 400;
   margin: 0;
   margin-bottom: 37px;
   font-size: 36px;
@@ -50,6 +52,8 @@
 }
 
 .questionnaire__subtitle {
+  font-family: $special-font;
+  font-weight: 400;
   margin: 0;
   font-size: 14px;
   line-height: 18px;

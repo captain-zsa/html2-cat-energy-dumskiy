@@ -1,9 +1,7 @@
 .logo {
-  @include mobile-only {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover,
   &:focus {
@@ -31,7 +29,7 @@
 }
 
 .logo__icon-text {
-  margin-top: 6px;
+  padding: 6px 9px 0 0;
 
   @include tablet {
     display: none;
@@ -39,14 +37,11 @@
 }
 
 .logo__image {
-  display: block;
-  margin: 0 auto;
   fill: $black-5;
 
   @include tablet {
     width: 143px;
     height: 26px;
-    margin: 0;
-    margin-right: auto;
+    margin: 0 auto 0 0;
   }
 }

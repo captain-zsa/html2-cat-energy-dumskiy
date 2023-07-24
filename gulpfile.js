@@ -103,6 +103,7 @@ const server = (done) => {
     server: {
       baseDir: 'build'
     },
+    browser: 'chrome',
     cors: true,
     notify: false,
     ui: false,

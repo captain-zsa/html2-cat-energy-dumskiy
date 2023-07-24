@@ -19,6 +19,7 @@
     min-width: 440px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   @include desktop {
@@ -56,6 +57,14 @@
 
   @include desktop {
     padding: 16px 0 6px;
+
+    &--color-invert {
+      color: $white;
+    }
+
+    &--color-invert:not([href]) {
+      border-color: $white;
+    }
   }
 
   &[href] {
@@ -67,16 +76,6 @@
 
     &:active {
       opacity: 0.3;
-    }
-  }
-}
-
-.navigation__link--color-invert {
-  @include desktop {
-    color: $white;
-
-    &:not([href]) {
-      border-color: $white;
     }
   }
 }
