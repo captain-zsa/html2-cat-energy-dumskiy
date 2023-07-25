@@ -18,7 +18,9 @@
 }
 
 .catalog__title {
-  margin: 27px 0 41px;
+  font-family: $special-font;
+  font-weight: 400;
+  margin: 28px 0 41px;
   font-size: 36px;
   line-height: 36px;
 
@@ -29,7 +31,7 @@
   }
 
   @include desktop {
-    margin: 74px 0 84px;
+    margin: 76px 0 84px;
   }
 }
 
@@ -37,6 +39,7 @@
   @include clear-list;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  column-gap: 20px;
 
   @include tablet {
     grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));

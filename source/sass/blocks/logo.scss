@@ -1,31 +1,16 @@
 .logo {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   &:hover,
   &:focus {
     outline: none;
-
-    .logo__image {
-      fill: $gray-65;
-    }
-
-    .logo__icon-picture,
-    .logo__icon-text {
-      opacity: 0.8;
-    }
+    opacity: 0.8;
   }
 
   &:active {
-    .logo__image {
-      fill: $gray-50;
-    }
-
-    .logo__icon-picture,
-    .logo__icon-text {
-      opacity: 0.6;
-    }
+    opacity: 0.6;
   }
 }
 
@@ -44,18 +29,19 @@
 }
 
 .logo__icon-text {
+  padding: 6px 9px 0 0;
+
   @include tablet {
     display: none;
   }
 }
 
 .logo__image {
-  display: block;
-  margin: 0 auto;
   fill: $black-5;
 
   @include tablet {
-    margin: 0;
-    margin-right: auto;
+    width: 143px;
+    height: 26px;
+    margin: 0 auto 0 0;
   }
 }

@@ -1,5 +1,5 @@
 .promotion {
-  background: $green-10 url("../img/cat-case-background-mobile@1x.jpg") no-repeat center center;
+  background: $green-30 url("../img/cat-case-background-mobile@1x.jpg") no-repeat center center;
 
   @include resolution {
     background-image: url("../img/cat-case-background-mobile@2x.jpg");
@@ -34,7 +34,7 @@
   }
 
   @include desktop {
-    padding: 56px 43px 42px 50px;
+    padding: 56px 43px 42px 41px;
   }
 
   &::before {
@@ -67,5 +67,9 @@
     margin-left: auto;
     width: 161px;
     text-align: left;
+  }
+
+  @include desktop {
+    margin-top: 130px;
   }
 }

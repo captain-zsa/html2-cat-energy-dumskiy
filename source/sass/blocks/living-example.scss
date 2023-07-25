@@ -25,8 +25,14 @@
   @include container;
   padding: 25px 0 40px;
 
+  @include tablet {
+    padding: 42px 0 101px;
+    display: flex;
+  }
+
   @include tablet-only {
-    padding: 43px 0 101px;
+    flex-direction: column;
+    align-items: center;
   }
 
   @include desktop {
@@ -38,7 +44,7 @@
 
 .living-example__wrapper {
   @include desktop {
-    width: 436px;
+    width: 433px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -46,6 +52,8 @@
 }
 
 .living-example__title {
+  font-family: $special-font;
+  font-weight: 400;
   margin: 0;
   margin-bottom: 40px;
   font-size: 36px;

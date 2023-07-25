@@ -5,6 +5,8 @@
 }
 
 .fieldset__title {
+  font-family: $special-font;
+  font-weight: 400;
   margin: 0;
   color: $black;
   text-transform: none;
@@ -31,9 +33,13 @@
     height: 2px;
     width: 100vw;
     background-color: $green-10;
-    top: 60%;
+    top: 16px;
     z-index: -1;
     left: calc((100vw - 100%) / -2);
+
+    @include tablet {
+      top: 60%;
+    }
   }
 
   @include tablet {

@@ -11,26 +11,24 @@
   }
 
   @include desktop {
-    margin-top: 54px;
+    margin-top: 53px;
   }
 }
 
 .main-header__wrapper {
-  padding: 10px 20px 17px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 
-  @include tablet {
-    padding: 0;
+  @include mobile-only {
+    padding: 10px 20px 17px;
   }
 }
 
-.main-header__logo {
-  width: 191px;
-}
-
 .main-header__toggle {
+  margin-top: 4px;
+
   &--nojs {
     display: none;
   }

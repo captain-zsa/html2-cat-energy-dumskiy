@@ -8,10 +8,11 @@
 @import "fonts.scss";
 
 // COMMON
-@import "common.scss";
 @import "visually-hidden.scss";
 
 // BLOCKS
+@import "blocks/page.scss";
+@import "blocks/main-container.scss";
 @import "blocks/additionally-product.scss";
 @import "blocks/arguments.scss";
 @import "blocks/button.scss";
