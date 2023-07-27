@@ -7,12 +7,18 @@
     height: 100%;
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
     z-index: -1;
     background-color: $gray-15;
 
     @include tablet {
-      height: 462px;
+      top: 619px;
+      height: calc(100% - 619px);
+    }
+
+    @include desktop {
+      top: 165px;
+      height: calc(100% - 165px);
     }
   }
 

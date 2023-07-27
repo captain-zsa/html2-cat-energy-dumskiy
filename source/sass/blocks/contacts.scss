@@ -1,14 +1,6 @@
-.contacts {
-  position: relative;
-}
-
 .contacts__container {
-  max-width: $desktop;
-  margin: 0 auto;
-  box-sizing: border-box;
-
   @include desktop {
-    padding: 95px 110px 107px;
+    position: relative;
   }
 }
 
@@ -30,6 +22,9 @@
     padding: 56px 78px 56px 80px;
     background-color: $white;
     width: 565px;
+    position: absolute;
+    top: 95px;
+    left: calc((100vw - $desktop) / 2 + 110px);
   }
 }
 
@@ -65,23 +60,6 @@
 
   @include tablet {
     font-size: 16px;
-
     gap: 20px;
-  }
-}
-
-.contacts__map {
-  width: 100%;
-  display: block;
-
-  @include tablet {
-    height: 400px;
-  }
-
-  @include desktop {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
   }
 }
