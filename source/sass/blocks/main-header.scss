@@ -26,14 +26,6 @@
   }
 }
 
-.main-header__toggle {
-  margin-top: 4px;
-
-  &--nojs {
-    display: none;
-  }
-}
-
 .main-header__navigation {
   @include mobile-only {
     &--opened {
@@ -51,5 +43,33 @@
       display: block;
       position: static;
     }
+  }
+}
+
+.main-header__toggle {
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+  background-color: $black;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &--closed {
+    mask-image: url("../img/icon/sprite.svg#burger");
+  }
+
+  &--opened {
+    mask-image: url("../img/icon/sprite.svg#cross-close");
+  }
+
+  &--nojs {
+    background-color: $white;
+    cursor: default;
+  }
+
+  @include tablet {
+    display: none;
   }
 }

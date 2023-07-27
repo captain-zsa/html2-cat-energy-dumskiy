@@ -17,6 +17,7 @@
     font-size: 18px;
     line-height: 24px;
     min-width: 440px;
+    max-width: 500px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -24,6 +25,7 @@
 
   @include desktop {
     min-width: 480px;
+    max-width: 575px;
     font-size: inherit;
     line-height: 30px;
   }

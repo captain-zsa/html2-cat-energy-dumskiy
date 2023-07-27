@@ -25,16 +25,17 @@
 
     @include desktop {
       width: 50%;
-      top: -112px;
-      height: 694px;
+      top: auto;
+      bottom: 0;
+      height: 800px;
       left: 50%;
       background-image: url("../img/cat-background-desktop@1x.jpg");
-      background-position: right center;
+      background-position: right bottom;
+    }
 
-      @include resolution {
-        background-image: url("../img/cat-background-desktop@2x.jpg");
-        background-size: 720px auto;
-      }
+    @media (min-width: $desktop) and (min-resolution: 2dppx) {
+      background-image: url("../img/cat-background-desktop@2x.jpg");
+      background-size: 720px auto;
     }
   }
 
@@ -74,6 +75,10 @@
     margin-bottom: 41px;
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @include desktop {
+    width: 430px;
   }
 }
 
